@@ -36,16 +36,23 @@ namespace pruevaapp
             informacion.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.solonumeros(e);
+        }
+
+        private void bntregistrarse_Click(object sender, EventArgs e)
         {
             this.Hide();
             registro registro = new registro();
             registro.Show();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            v.solonumeros(e);
+            this.Hide();
+            Contraseña_Olvidada Contraseña = new Contraseña_Olvidada();
+            Contraseña.ShowDialog();
         }
     }
 }
